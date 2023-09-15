@@ -19,8 +19,8 @@ namespace EmployeeLib.Model
         [MinLength(5), MaxLength(100)]
         public string Name { get; set; }
         [Required]
-/*        [Range(1970 - 01 - 01 ,2004 - 01-01)]
-*/        public DateTime DateOfBirth { get; set; }
+       [Range(typeof(DateTime),"1970 - 01 - 01" ,"2004 - 01-01")]
+        public DateTime DateOfBirth { get; set; }
         public decimal Experience { get; set; }
         [Required]
         [RegularExpression(@"^[0-9]{10}$")]
